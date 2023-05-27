@@ -215,16 +215,25 @@ messageId: ""
 })
 }
 switch (command) {
-case 'Menu': 
-global.pp_bot = fs.readFileSync("./image/foto.jpg")
+case 'menu': 
 listmenu = `
 ╔─═─═⊱ 「 MENU UTAMA 」 
 
- • Hi *${pushname}*
- • Untuk melihat semua menu, ketik _.allmenu_
+  ♦️ Hi *${pushname}!* ${ucapanWaktu}
+  ♦️ WAKTU:  ${tanggal}*
+  ♦️ Untuk melihat semua menu, ketik _.allmenu_
 
 ┗━━━━━━━━━━━━━
-╔─═─═⊱ 「 INFO 」 
+╔─═─═⊱ 「 BOT INFO 」 
+│❏ ᴄʀᴇᴀᴛᴏʀ: KSR CLOUD
+│❏ ʙᴏᴛ ɴᴀᴍᴇ: ZeniCat BOT
+│❏ 24/7 Online _(Jika tidak mati sendiri)_
+┗━━━━━━━━━━━━━
+`
+diablobotwhatsapp.reply(listmenu)
+break
+case 'allmenu': 
+jiren = `╔─═─═⊱ 「 INFO 」 
 │ Ketik sesuai menu misal _.sticker_ untuk 
 │ mengetahui cara pakainya	
 │ Jangan Spam BOT
@@ -232,21 +241,27 @@ listmenu = `
 │ Jika Tidak ada balasan selama 2 Menit, Silahkan
 │ ulangi
 ┗━━━━━━━━━━━━━
-`
-diablobotwhatsapp.reply(listmenu)
-break
-case 'allmenu':
-jiren14 = `ALL MENU
-  • .tiktok
-  • .sticker
-  • .say
-  • .menfess
-  • .ytmp3
-  • .fitnah
-  •
-  •
-  •
-  •
+╔─═─═⊱ 「 ALL MENU 」 
+│ • .tiktok
+│ • .sticker
+│ • .say 
+│ • .menfess
+│ • .ytmp3
+│ • .fitnah
+│ • .tiktaktoe
+│ • .nulis
+│ • .ytplay
+│ • .tebakgambar
+│ • .susunkata
+│ • .tebakbendera
+│ • .lirik
+┗━━━━━━━━━━━━━
+Note :
+• Selalu gunakan command untuk memulai fitur, Contoh : *.tiktok linkvideo*
+• Beberapa video/musik tidak dapat di download
+• Jangan Spam BOT
+• Beberapa fitur mungkin belum berfungsi/error
+
 `
 
 
